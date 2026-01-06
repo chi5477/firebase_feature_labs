@@ -18,8 +18,7 @@
 ### 前置需求
 - 已在 `flutter_app/` 建立 Flutter 專案並完成 `flutterfire configure`。
 - 若使用真實專案：需在 Firebase Console 啟用 Email/Password Sign-in Method。
-- 若盡量不開瀏覽器：可使用 Firebase Auth Emulator 進行本機驗證。
- - 若使用 Emulator，請先完成「Emulators 初始化選擇」。
+- 若使用 Emulator，請先完成「Emulators 初始化選擇」。
 
 ### Emulators 初始化選擇（只做登入/Auth）
 1. 只做登入/Auth，採本機 Emulator：
@@ -32,6 +31,22 @@ firebase init emulators
    - `Add Firebase to an existing Google Cloud Platform project`
    - `Don't set up a default project`
 3. 進入 Emulators Setup 後，勾選 **Authentication Emulator**（視需求可加 Firestore/Functions）。
+4. 參考互動輸出（範例）：
+```
+=== Emulators Setup
+✔ Which Firebase emulators do you want to set up? Press Space to select emulators, then Enter to confirm your choices.
+  • Authentication Emulator
+✔ Which port do you want to use for the auth emulator? 9099
+✔ Would you like to enable the Emulator UI? Yes
+✔ Which port do you want to use for the Emulator UI (leave empty to use any available port)? 4000
+✔ Would you like to download the emulators now? Yes
+i  ui: downloading ui-v1.15.0.zip...
+
+✔  Wrote configuration info to firebase.json
+✔  Wrote project information to .firebaserc
+
+✔  Firebase initialization complete!
+```
 
 ### 步驟
 1. 安裝依賴：
@@ -90,6 +105,8 @@ final email = user?.email;
 - 註冊與登入皆成功。
 - `currentUser` 可取得 email 或 uid。
 - 若使用 Emulator，Emulator 內能看到新增帳號。
+- 在 Emulator UI 查看（http://127.0.0.1:4000/auth）：
+  ![Auth Emulator UI](./auth-emulator-ui.png)
 
 ## 失敗排查（選填）
 - 若出現 `operation-not-allowed`，確認 Email/Password 已在 Console 啟用。

@@ -13,6 +13,8 @@
 ## 2. 專案目標與範圍
 - 本 repo 用於「Firebase 登入相關實驗」。
 - 內容以文件與可重現實驗流程為主。
+- Flutter 實驗採單一 App（`flutter_app/`），以分頁（TabBar）切換不同實驗。
+- 實驗頁面放在 `flutter_app/lib/experiments/`。
 
 ---
 
@@ -20,6 +22,7 @@
 - 根目錄提供總覽與導覽：`README.md`
 - 每個實驗子目錄以 `README.md` 說明步驟與驗證方式
 - 實驗資料夾命名以遞增數字前綴（例如：`01-dns-basics`、`02-token-count`）
+- Flutter 專案路徑固定為 `flutter_app/`，不建立多份 Flutter 專案。
 
 ---
 
@@ -58,6 +61,7 @@
 - 若有平台差異需分段（Windows / macOS / Linux）
 - 內容以可重現為優先，避免含糊描述
 - `## 範圍說明` 必須清楚說明該功能是 Firebase 的哪一類功能（例如：Emulator Suite 是本地模擬服務、App Distribution 是測試版發佈功能）
+- 實驗需說明如何透過 TabBar 在同一 Flutter App 切換頁面進行驗證
 
 ---
 

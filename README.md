@@ -20,8 +20,9 @@
 - 已準備 Firebase 專案可供連線與測試。
 - 建議從 repo 根目錄執行 CLI 指令；若在子目錄執行，請使用 `--config ../firebase.json` 指向設定檔。
 - 若使用真實專案，需在 Firebase Console 啟用對應的 Sign-in Method（例如 Email/Password、Anonymous）。
-- 若想盡量不開瀏覽器，可改用 Firebase Auth Emulator 進行本機驗證。
+- 可改用 Firebase Auth Emulator 進行本機驗證，避免使用 Firebase Console；若需查看帳號列表，請用 Emulator UI。
 - Flutter 專案僅需建立一次，建議放在 `flutter_app/`，所有實驗共用此專案。
+- 實驗頁面放在 `flutter_app/lib/experiments/`，使用 TabBar 在同一 App 切換不同實驗。
 
 ## 一次性初始化流程
 ```bash
