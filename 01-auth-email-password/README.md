@@ -114,4 +114,5 @@ final email = user?.email;
 - 若 Emulator 連線失敗，確認 emulator 是否啟動且埠號正確。
 
 ## 參考連結（選填）
-- Firebase Auth：<fill-link>
+- Firebase Auth（Flutter Email/Password）：https://firebase.google.com/docs/auth/flutter/password-auth
+- Firebase Auth（Flutter 入門）：https://firebase.google.com/docs/auth/flutter/start

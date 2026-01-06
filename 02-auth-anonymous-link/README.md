@@ -106,5 +106,11 @@ await FirebaseAuth.instance.currentUser?.linkWithCredential(credential);
 - 若出現 `operation-not-allowed`，確認 Anonymous 或 Email/Password 已在 Console 啟用。
 - 若連結失敗，確認匿名帳號仍為登入狀態。
 
+## 補充說明（匿名 UID）
+- 匿名 UID 不會自動刪除。
+- 連結成正式帳號後 UID 會保留，`isAnonymous` 會變成 `false`。
+- 若要清除匿名帳號，需手動刪除或用後台腳本清理。
+
 ## 參考連結（選填）
-- Firebase Auth：<fill-link>
+- Firebase Auth（開始使用/登入方式概覽）：https://firebase.google.com/docs/auth/where-to-start
+- Firebase Auth（匿名登入）：https://firebase.google.com/docs/auth/flutter/anonymous-auth

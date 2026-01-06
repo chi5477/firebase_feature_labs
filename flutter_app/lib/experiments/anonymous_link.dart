@@ -19,8 +19,8 @@ class _AnonymousLinkExperimentState extends State<AnonymousLinkExperiment> {
       final userCredential = await FirebaseAuth.instance.signInAnonymously();
       final uid = userCredential.user?.uid ?? 'unknown';
       setState(() => _status = '匿名登入成功\nUID: $uid');
-    } catch (e) {
-      setState(() => _status = '匿名登入失敗: $e');
+    } on FirebaseAuthException catch (e) {
+      setState(() => _status = '匿名登入失敗: ${e.code}');
     }
   }
 
@@ -33,8 +33,8 @@ class _AnonymousLinkExperimentState extends State<AnonymousLinkExperiment> {
       await FirebaseAuth.instance.currentUser?.linkWithCredential(credential);
       final uid = FirebaseAuth.instance.currentUser?.uid ?? 'unknown';
       setState(() => _status = '連結成功\nUID: $uid');
-    } catch (e) {
-      setState(() => _status = '連結失敗: $e');
+    } on FirebaseAuthException catch (e) {
+      setState(() => _status = '連結失敗: ${e.code}');
     }
   }
 

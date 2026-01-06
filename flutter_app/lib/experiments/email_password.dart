@@ -23,8 +23,8 @@ class _EmailPasswordExperimentState extends State<EmailPasswordExperiment> {
       );
       _updateCurrentUser();
       setState(() => _status = '註冊成功');
-    } catch (e) {
-      setState(() => _status = '註冊失敗: $e');
+    } on FirebaseAuthException catch (e) {
+      setState(() => _status = '註冊失敗: ${e.code}');
     }
   }
 
@@ -36,8 +36,8 @@ class _EmailPasswordExperimentState extends State<EmailPasswordExperiment> {
       );
       _updateCurrentUser();
       setState(() => _status = '登入成功');
-    } catch (e) {
-      setState(() => _status = '登入失敗: $e');
+    } on FirebaseAuthException catch (e) {
+      setState(() => _status = '登入失敗: ${e.code}');
     }
   }
 
