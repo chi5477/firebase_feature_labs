@@ -1,4 +1,4 @@
-# AGENTS.md（firebase_auth_labs）
+# AGENTS.md（firebase_feature_labs）
 
 本文件為本專案層級的 AI/Codex 行為規範。若與全域 `~/.codex/AGENTS.md` 衝突，**以本文件為優先**；但安全/危險操作限制仍應優先遵守。
 
@@ -11,10 +11,13 @@
 ---
 
 ## 2. 專案目標與範圍
-- 本 repo 用於「Firebase 登入相關實驗」。
+- 本 repo 用於「Firebase 各功能實驗」。
 - 內容以文件與可重現實驗流程為主。
 - Flutter 實驗採單一 App（`flutter_app/`），以分頁（TabBar）切換不同實驗。
 - 實驗頁面放在 `flutter_app/lib/experiments/`。
+
+## 提醒（待辦）
+- 03 實驗（Google 帳號登入）尚未完成實際驗證；下次開啟時請先提醒使用者，直到使用者明確回覆已完成驗證後再移除此註記。
 
 ---
 

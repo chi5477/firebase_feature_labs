@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'firebase_options.dart';
 import 'experiments/anonymous_link.dart';
 import 'experiments/email_password.dart';
+import 'experiments/social_login.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +35,7 @@ class ExperimentsHome extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: 3,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Firebase Auth Labs'),
@@ -42,6 +43,7 @@ class ExperimentsHome extends StatelessWidget {
             tabs: [
               Tab(text: 'Email/Password'),
               Tab(text: 'Anonymous Link'),
+              Tab(text: 'Social Login'),
             ],
           ),
         ),
@@ -49,6 +51,7 @@ class ExperimentsHome extends StatelessWidget {
           children: [
             EmailPasswordExperiment(),
             AnonymousLinkExperiment(),
+            SocialLoginExperiment(),
           ],
         ),
       ),

@@ -1,4 +1,4 @@
-# firebase_cli_labs
+# firebase_feature_labs
 
 ## Session 記錄
 ```bash
@@ -6,12 +6,13 @@
 ```
 
 ## 目的
-- 以最小、可驗證的實驗熟悉 Firebase Authentication 的登入流程與關鍵概念。
+- 以最小、可驗證的實驗熟悉 Firebase 各功能的流程與關鍵概念。
 - 以 CLI 與 SDK 為主，建立可重現的操作與驗證方式。
 
 ## 實驗總覽
 - [01-auth-email-password：Email/Password 登入](./01-auth-email-password/README.md)
 - [02-auth-anonymous-link：匿名登入與轉正式帳號](./02-auth-anonymous-link/README.md)
+- [03-auth-google-signin：Google 帳號登入](./03-auth-google-signin/README.md)
 
 ## 共通前置條件
 - 已安裝 Firebase CLI。
