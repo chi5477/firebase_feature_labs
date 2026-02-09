@@ -2,7 +2,7 @@
 
 ## Session 記錄
 ```bash
- codex resume 019b8e0b-148d-7ca3-bffa-95ed57c6731e
+codex resume 019b8e0b-148d-7ca3-bffa-95ed57c6731e
 ```
 
 ## 目的
